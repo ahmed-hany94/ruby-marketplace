@@ -1,0 +1,7 @@
+@userToken = Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNDhkMTBjNmRhZmFlYjg0ZjJkZWJjOSIsInVzZXJuYW1lIjoiamFjb2IiLCJleHAiOjE2MjA1Njg4NDQsImlhdCI6MTYxNTM4NDg0NH0.d0PkEYe3DXtGR89FGWWIcYDqHhDYUXNqXuDSbSknGhY
+
+####################################################################
+GET http://localhost:3000/api/v1/users/1
+Content-Type: application/json
+
+####################################################################
