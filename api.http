@@ -1,7 +1,42 @@
-@userToken = Token
+@userToken = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE3MDg0NjUzNjB9.wJlNfIhWkrpOWV8q1mFgdJQJE2NZuUJGP_2V4l4FLpg
 
 ####################################################################
-GET http://localhost:3000/api/v1/users/1
+# Get all the users
+POST http://localhost:8888/api/v1/users
 Content-Type: application/json
 
+{ 
+    "user": {
+        "email":"test1@test.org",
+        "password": "123456"
+    }
+}
+####################################################################
+# Get user by ID
+GET http://localhost:8888/api/v1/users/1
+Content-Type: application/json
+####################################################################
+# Login
+POST http://localhost:8888/api/v1/tokens
+Content-Type: application/json
+
+{
+    "user": {
+        "email":"test1@test.org",
+        "password":"123456"
+    }
+}
+####################################################################
+# Create Product
+POST http://localhost:8888/api/v1/products
+Content-Type: application/json
+Authorization: {{userToken}}
+
+{ 
+    "product": {
+        "title": "product 1",
+        "price": "9.99",
+        "published": false
+    }
+}
 ####################################################################
