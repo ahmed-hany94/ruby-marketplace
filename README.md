@@ -1,24 +1,32 @@
-# README
+# Ruby Marketplace
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ruby API for educational purposes
 
-Things you may want to cover:
+## Building
 
-* Ruby version
+```
+$ git clone https://github.com/ahmed-hany94/ruby-marketplace.git
+$ cd ruby-marketplace
+$ bundle install
+```
 
-* System dependencies
+### For Windows
+```
+$ ruby .\bin\rails db:seed RAILS_ENV=test
+$ ruby .\bin\rails db:migrate RAILS_ENV=test
+$ ruby .\bin\rails db:seed
+$ ruby .\bin\rails db:migrate
+$ rake test
+$ ruby .\bin\rails server
+```
 
-* Configuration
+### For Linux/Mac
+```
+$ ./bin/rails db:seed RAILS_ENV=test
+$ ./bin/rails db:migrate RAILS_ENV=test
+$ ./bin/rails db:seed
+$ ./bin/rails db:migrate
+$ rake test
+$ ./bin/rails server
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
