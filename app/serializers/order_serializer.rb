@@ -1,5 +1,5 @@
-class UserSerializer
+class OrderSerializer
   include FastJsonapi::ObjectSerializer
-    attributes :email
+    belongs_to :user
     has_many :products
 end
